@@ -1,0 +1,60 @@
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.venv/
+venv/
+env/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Editors and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Large generated artifacts
+data/
+models/
+outputs/
+knowledge_base/
+
+# Report and course reference material
+NLP_course_Assignment_3_Template/
+refrence/
+
+# Logs and temporary files
+*.log
+*.out
+*.err
+tmp/
+temp/
+
+# Binary / model artifacts
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# LaTeX build leftovers
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+*.pdf
