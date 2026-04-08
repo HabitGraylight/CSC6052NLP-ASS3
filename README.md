@@ -54,8 +54,6 @@ The following are excluded by `.gitignore` because they are large, generated, or
 - `models/`
 - `outputs/`
 - `knowledge_base/`
-- `NLP_course_Assignment_3_Template/`
-- `refrence/`
 
 If you want to reproduce the full project locally, these directories will be recreated by the scripts below.
 
@@ -266,13 +264,6 @@ The action turn is much shorter than the final-answer turn in the multi-turn tra
 
 - Medical QA SFT works well on this small model.
 - Real multi-turn agent post-training is better than legacy single-turn trace imitation.
-- The current bottleneck is **low real tool-calling frequency**, not runtime integration.
+- After training the agent raise its tool calling rate, but it seems not enough.
 - A good next step is to strengthen action-centric supervision so that the model is rewarded more strongly for calling tools before answering.
 
-## License
-
-The upstream GitHub repository already includes the MIT License.
-
-## Upload Notes
-
-If you are copying this project into an empty GitHub repository, upload the source files, `assets/`, `requirements.txt`, `README.md`, and `.gitignore`. The ignore rules are already set so that local datasets, model weights, checkpoints, report files, and reference notebooks stay out of version control.
