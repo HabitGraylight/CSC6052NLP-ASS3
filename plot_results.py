@@ -69,19 +69,15 @@ def plot_agent_tool_metrics() -> None:
         "completion_rate",
     ]
     labels = ["Tool Call", "Exec Success", "Tool Choice", "Completion"]
-    v1 = [data["v1_legacy"]["tool_metrics"][m] for m in metrics]
     v2 = [data["v2_react"]["tool_metrics"][m] for m in metrics]
 
-    fig, ax = plt.subplots(figsize=(9.0, 4.8))
-    x = range(len(metrics))
-    width = 0.34
-    ax.bar([i - width / 2 for i in x], v1, width=width, label="Legacy Trace Agent", color="#72B7B2")
-    ax.bar([i + width / 2 for i in x], v2, width=width, label="React Multi-turn Agent", color="#E45756")
-    ax.set_xticks(list(x), labels)
+    fig, ax = plt.subplots(figsize=(8.6, 4.8))
+    colors = ["#4C78A8", "#72B7B2", "#F58518", "#E45756"]
+    ax.bar(labels, v2, color=colors)
     ax.set_ylabel("Rate")
     ax.set_ylim(0, 1.08)
-    ax.set_title("Real Multi-turn Training Increases Tool-use Behavior")
-    ax.legend(frameon=True, loc="upper left")
+    ax.set_title("Runtime Metrics of the React Multi-turn Agent")
+    ax.grid(True, axis="y", linestyle="--", alpha=0.35)
     annotate_bars(ax, "{:.2f}")
     save(fig, "agent_tool_metrics")
 

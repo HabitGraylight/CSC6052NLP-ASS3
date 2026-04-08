@@ -244,7 +244,7 @@ The MedQuad adapter improves ROUGE-L over the base model on held-out medical QA.
 
 ### Agent tool-use metrics
 
-The real multi-turn ReAct training setup is clearly better than the legacy trace baseline under the real runtime protocol, although tool call rate is still low.
+The main agent result is the real multi-turn ReAct model. The older legacy trace setup is best understood as a formatting ablation, while the React agent is the one that actually matches the runtime protocol.
 
 ![Agent tool metrics](assets/figures/agent_tool_metrics.png)
 
@@ -263,7 +263,6 @@ The action turn is much shorter than the final-answer turn in the multi-turn tra
 ## Current Takeaway
 
 - Medical QA SFT works well on this small model.
-- Real multi-turn agent post-training is better than legacy single-turn trace imitation.
+- Real multi-turn agent post-training is the main deployable agent result.
 - After training the agent raise its tool calling rate, but it seems not enough.
 - A good next step is to strengthen action-centric supervision so that the model is rewarded more strongly for calling tools before answering.
-
